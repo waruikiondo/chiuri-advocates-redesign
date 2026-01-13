@@ -168,7 +168,8 @@ export default function Home() {
               className="relative"
             >
               <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-[#C5A059]" />
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Law Firm" className="w-full relative z-10 p-6 grayscale hover:grayscale-0 transition-all duration-700" />
+              {/* UPDATED IMAGE HERE */}
+              <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Law Firm Meeting" className="w-full relative z-10 p-6 grayscale hover:grayscale-0 transition-all duration-700" />
               <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-[#C5A059]" />
             </motion.div>
             
