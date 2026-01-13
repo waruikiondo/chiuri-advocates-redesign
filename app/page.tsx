@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronRight, Phone, Mail, MapPin, Scale, Shield, Users, FileText, Globe, Gavel } from 'lucide-react';
+import { ChevronRight, Phone, Mail, MapPin, Scale, Shield, Users, FileText, Globe, Gavel, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 
 // --- COMPONENTS ---
@@ -127,7 +127,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#E5C585]">Representation</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 leading-relaxed">
-              We combine over a decade of litigation mastery with modern commercial acumen to protect your legacy.
+              We provide competent professional legal services in line with current legislation, delivering the highest achievable standards to our clientele.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link href="#contact" className="bg-white text-[#111827] px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#C5A059] hover:text-white transition-all duration-300">
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT SECTION (Using Client's "About" Text) */}
       <section id="firm" className="py-32 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -168,85 +168,94 @@ export default function Home() {
               className="relative"
             >
               <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-[#C5A059]" />
-              {/* UPDATED IMAGE HERE: Classic Gavel and Books */}
+              {/* CORRECT IMAGE: Gavel & Books */}
               <img src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Gavel and Law Books" className="w-full relative z-10 p-6 grayscale hover:grayscale-0 transition-all duration-700" />
               <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-[#C5A059]" />
             </motion.div>
             
             <div>
-              <SectionHeading align="left" sub="Who We Are" title="A Modern Standard in Legal Practice" />
+              <SectionHeading align="left" sub="Who We Are" title="A Modern, Fully Fledged Firm" />
               <p className="text-gray-600 mb-6 leading-loose font-light text-lg">
-                Based in Thika, <span className="text-[#111827] font-semibold">Chiuri & Chiuri Advocates</span> is driven by a singular vision: to provide realistic, competent, and innovative legal solutions. 
+                We are a modern fully fledged firm of advocates located in <span className="text-[#111827] font-semibold">Thika Town</span> with over ten years of experience. The firm was established by <span className="text-[#111827] font-semibold">Dennis Chiuri Wachira</span>.
               </p>
-              <p className="text-gray-600 mb-8 leading-loose font-light">
-                We do not just quote the law; we apply it strategically. From high-stakes commercial transactions to sensitive family disputes, our approach is personalized and proactive.
-              </p>
-              <div className="flex gap-4">
-                 <div className="flex items-center gap-4 bg-[#F9F9F7] px-6 py-4 border-l-4 border-[#C5A059]">
-                    <Shield className="text-[#C5A059]" />
-                    <span className="font-serif text-[#111827] font-bold">Conflict Free</span>
-                 </div>
-                 <div className="flex items-center gap-4 bg-[#F9F9F7] px-6 py-4 border-l-4 border-[#111827]">
-                    <Users className="text-[#111827]" />
-                    <span className="font-serif text-[#111827] font-bold">Client Focused</span>
-                 </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-[#F9F9F7] p-6 border-l-2 border-[#C5A059]">
+                  <h4 className="text-[#111827] font-serif font-bold mb-2">Our Vision</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">Providing competent professional legal services in line with current legislation.</p>
+                </div>
+                <div className="bg-[#F9F9F7] p-6 border-l-2 border-[#111827]">
+                  <h4 className="text-[#111827] font-serif font-bold mb-2">Our Mission</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">To deliver the highest achievable standards of legal services to our clientele.</p>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES GRID */}
+      {/* SERVICES GRID (Using Client's Specific Wording) */}
       <section id="expertise" className="py-32 bg-[#F9F9F7]">
         <div className="container mx-auto px-6">
-          <SectionHeading sub="Our Expertise" title="Comprehensive Legal Solutions" />
+          <SectionHeading sub="Practice Areas" title="Comprehensive Legal Solutions" />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ServiceCard 
               icon={Gavel}
-              title="Litigation & Dispute Resolution" 
-              desc="Strategic representation in Criminal, Civil, and Constitutional petitions focusing on solution-based outcomes."
+              title="Litigation" 
+              desc="A solution-based approach in instituting or defending litigants in criminal, civil, judicial review, and constitutional petitions. Our pleadings are meticulously drafted."
             />
             <ServiceCard 
               icon={FileText}
-              title="Conveyancing & Real Estate" 
-              desc="Seamless property transfers, lease drafting, and due diligence to secure your investments."
+              title="Conveyancing & Commercial" 
+              desc="We draft and peruse leases, commercial agreements, and exclusivity agreements. We effect transfers, conduct due diligence, and ensure seamless transactions."
             />
             <ServiceCard 
               icon={Globe}
-              title="Commercial & Corporate" 
-              desc="Banking securities, debentures, and agreements. We provide the framework for your business to thrive."
+              title="Banking & Securities" 
+              desc="Handling registration of charges, discharges, take over facilities, debentures, and related documents at various registries as required by the client."
             />
             <ServiceCard 
               icon={Users}
-              title="Family Law & Succession" 
-              desc="Handling divorce, wills, and estate planning with dignity, privacy, and legal precision."
+              title="Family Law" 
+              desc="Succession proceedings, drafting wills, and conciliation between parties. We also draft divorce petitions and responses regarding matrimonial property."
             />
             <ServiceCard 
               icon={Scale}
-              title="Employment Law" 
-              desc="Drafting contracts and mediating disputes to ensure fair and lawful workplace relationships."
+              title="Employment Relations" 
+              desc="Providing a framework for employers and employees to work conjunctively. We draw contracts, advise on termination, and litigate on unlawful termination."
             />
             <ServiceCard 
               icon={Shield}
+              title="Insurance Law" 
+              desc="Assisting clients in following up on claims, detecting fraudulent claims, and negotiating claims on behalf of insurers or the insured in line with best practices."
+            />
+             <ServiceCard 
+              icon={BookOpen}
               title="Intellectual Property" 
-              desc="Registration and defense of patents, industrial designs, and trademarks to protect your brand."
+              desc="We register patents, industrial designs, and trademarks to protect our client's intellectual property, keeping them ahead of their competitors."
             />
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
+      {/* CTA SECTION (Using Client's "Our Approach" Text) */}
       <section id="contact" className="py-24 bg-[#111827] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">Get In Touch</span>
-              <h2 className="font-serif text-5xl font-bold mb-8">Ready to Discuss Your Case?</h2>
-              <p className="text-gray-400 mb-10 text-lg font-light leading-relaxed">
-                Our charging for professional services is transparent and competitive. Visit our chambers or contact us to schedule a consultation.
+              <h2 className="font-serif text-5xl font-bold mb-8">Our Approach</h2>
+              <p className="text-gray-400 mb-6 text-lg font-light leading-relaxed">
+                We approach legal problems in the most logical way available. In providing legal services, the firm is always ready and willing to work closely with its clients for mutual benefit.
               </p>
+              <div className="bg-white/5 border border-[#C5A059]/30 p-6 rounded-sm mb-10">
+                <p className="text-sm text-gray-300 italic">
+                  "Generally the firm's legal fees are charged in line with the Advocates Remuneration Order. We negotiate payment periods in line with best practice rules and in a bid to serving our clients better."
+                </p>
+              </div>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-6 group">
